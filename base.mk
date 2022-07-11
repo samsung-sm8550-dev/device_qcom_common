@@ -304,9 +304,6 @@ INIT += init.class_main.sh
 INIT += init.qcom.wifi.sh
 INIT += vold.fstab
 INIT += init.qcom.ril.path.sh
-INIT += init.qcom.usb.rc
-INIT += init.msm.usb.configfs.rc
-INIT += init.qcom.usb.sh
 INIT += usf_post_boot.sh
 INIT += init.qcom.efs.sync.sh
 INIT += ueventd.qcom.rc
@@ -1082,9 +1079,6 @@ PRODUCT_DEFAULT_PROPERTY_OVERRIDES += \
 ifeq ($(TARGET_USES_QCOM_BSP_ATEL),true)
     PRODUCT_PROPERTY_OVERRIDES += persist.radio.multisim.config=dsds
 endif
-
-PRODUCT_DEFAULT_PROPERTY_OVERRIDES += \
-    vendor.usb.diag.func.name=diag
 
 # VNDK-SP:
 PRODUCT_PACKAGES += \
